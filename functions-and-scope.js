@@ -16,17 +16,17 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
-function countStudentsCumLaude (grades) {
-    let getStudentsCumLaude = 0;
+function getStudentsCumLaude (grades) {
+    let countStudentsCumLaude = 0;
     for (let i = 0; i < grades.length; i++) {
         if (grades[i] >= 8) {
-            getStudentsCumLaude += 1;
+            countStudentsCumLaude += 1;
         }
     }
-    return getStudentsCumLaude;
+    return countStudentsCumLaude;
 }
 
-numberStudentsCumLaude = countStudentsCumLaude(grades);
+numberStudentsCumLaude = getStudentsCumLaude(grades);
 
 console.log(numberStudentsCumLaude);
 
@@ -41,13 +41,13 @@ console.log(numberStudentsCumLaude);
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
 function cumLaude (grades) {
-    let getStudentsCumLaude = 0;
+    let countStudentsCumLaude = 0;
     for (let i = 0; i < grades.length; i++) {
         if (grades[i] >= 8) {
-            getStudentsCumLaude += 1;
+            countStudentsCumLaude ++;
         }
     }
-    return getStudentsCumLaude;
+    return countStudentsCumLaude;
 }
 
 console.log(cumLaude(grades));
@@ -72,8 +72,8 @@ function averageGrade (grades) {
     for (let i = 0; i < grades.length; i++) {
         sumGrades += grades[i];
     }
-    let getAverage =  sumGrades / grades.length;
-    return getAverage.toFixed(2);
+    const average =  sumGrades / grades.length;
+    return average.toFixed(2);
 }
 
 console.log(averageGrade(grades));

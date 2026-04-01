@@ -28,11 +28,10 @@ console.log(getEmailDomain("a.wiersma@outlook.com"));
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
 function typeOfEmail(email) {
-    const domainIndex = email.indexOf("@") + 1;
-    const domain = email.substring(domainIndex);
-    if (domain.includes("novi-education.nl")) {
+    const domain = getEmailDomain(email);
+    if (domain === ("novi-education.nl")) {
         return "Student";
-    } else if (domain.includes("novi.nl")) {
+    } else if (domain === ("novi.nl")) {
         return "Medewerker";
     } else {
         return "Extern";
